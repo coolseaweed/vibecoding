@@ -81,7 +81,10 @@ export function SessionDoctor({ stages }: { stages: DoctorStage[] }) {
           <strong>전체 진단</strong>
           <p>{passedCount} / {allIds.length} PASS · {failedCount} FAIL</p>
         </div>
-        <b>{ready ? percent : 0}%</b>
+        <div className="doctor-score">
+          <b>{ready ? percent : 0}%</b>
+          <a className="doctor-reset" href="/doctor?reset=1" onClick={reset}>초기화</a>
+        </div>
       </div>
       <div className="doctor-progress" aria-hidden="true">
         <span style={{ width: `${ready ? percent : 0}%` }} />
@@ -140,8 +143,6 @@ export function SessionDoctor({ stages }: { stages: DoctorStage[] }) {
           );
         })}
       </div>
-
-      <a className="doctor-reset" href="/doctor?reset=1" onClick={reset}>진단 초기화</a>
     </div>
   );
 }
