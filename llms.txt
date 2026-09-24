@@ -1,0 +1,84 @@
+# Vibe Coding Starter
+
+> A Korean-first guide and Next.js boilerplate for complete beginners on Windows and macOS. It teaches a four-stage vibe-coding session: environment setup, ideation, Goal planning, and review.
+
+Repository: https://github.com/coolseaweed/vibecoding
+Language: Korean, with English tool and command names preserved
+Package manager: Bun only
+Audience: complete beginners who may not have GitHub, Vercel, or Supabase accounts
+
+## Start here
+
+- docs/checklist/README.md — environment review for Git, GitHub, Bun, Vercel, Supabase, MCP, and security
+- docs/workflow/README.md — the canonical four-stage workflow, one-shot prompt, and completion criteria
+- docs/git/README.md — account creation, Windows and macOS installation, fork, clone, commit, and troubleshooting
+- docs/mcp/README.md — ChatGPT, Claude Desktop, Codex, and Claude Code setup for Vercel and Supabase MCP
+- docs/deploy/README.md — account creation, fork-based Vercel deployment, development Supabase setup, verification, and rollback
+
+The Markdown files under docs are the documentation source of truth. Their website routes use the same slug, for example `docs/git/README.md` becomes `/docs/git`.
+
+## Required workflow
+
+1. Environment setup: verify the OS, accounts, Git identity, GitHub authentication, Bun, repository status, local run, checks, and MCP scope.
+2. Ideation: define the user and problem, compare at least three approaches, choose the smallest valuable direction, and state non-goals.
+3. Planning (Goal): write a user outcome, scope, non-goals, constraints, and binary success criteria. Pair every task with verification.
+4. Review: inspect the diff, run deterministic checks, manually test desktop and mobile, review security and accessibility, and issue a pass / needs changes / blocked verdict.
+
+If review fails, return to the earliest stage that caused the failure and repeat the loop.
+
+## Repository commands
+
+```bash
+bun install --frozen-lockfile
+bun dev
+bun run lint
+bun run typecheck
+bun run build
+bun run check
+```
+
+Do not use npm, yarn, or pnpm. Do not add environment variables until the feature requiring them is approved. Never commit secrets or `.env` files.
+
+## MCP configuration
+
+- Codex repository config: `.codex/config.toml`
+- Claude Code repository config: `.mcp.json`
+- Vercel remote MCP domain: `https://mcp.vercel.com`
+- Supabase safe default: docs-only, read-only remote MCP until a real development project ref exists
+
+Repository-scoped config does not automatically restrict service permissions to one cloud project. ChatGPT and Claude Desktop do not read these repository files. Read `docs/mcp/README.md` before authentication. Prefer OAuth and manual confirmation. Scope Supabase to a development `project_ref`, `read_only=true`, and minimum features before enabling database tools.
+
+## One-shot agent contract
+
+Before editing, read `AGENTS.md`, `README.md`, `docs/workflow/README.md`, and the relevant guide. Inspect git status and existing configuration. State assumptions when information is missing.
+
+If no Goal with user, problem, scope, and acceptance criteria is supplied, do not invent or implement a feature. Return the missing-input template from `docs/workflow/README.md` and wait.
+
+Use the minimum change that satisfies the Goal. Preserve unrelated work. Do not create secrets, paid resources, production deployments, or destructive database changes without explicit authorization.
+
+Completion requires:
+
+- the requested user flow works;
+- `bun run lint`, `bun run typecheck`, and `bun run build` pass;
+- relevant browser checks pass on desktop and mobile;
+- no secrets or unintended files are staged;
+- the final report names evidence, deployment URL when requested, and any remaining limitation.
+
+## Evaluation criteria
+
+Judge every result on four criteria:
+
+1. A complete beginner can create GitHub, Vercel, and Supabase accounts and finish setup without unstated prerequisites.
+2. Instructions use short steps, define unfamiliar terms, and avoid unnecessary choices.
+3. The one-shot request produces the stated Goal accurately with explicit verification evidence.
+4. A reader with no prior coding knowledge can understand the repository documents without outside explanation.
+
+## Primary official references
+
+- OpenAI ChatGPT Developer mode: https://platform.openai.com/docs/guides/developer-mode
+- OpenAI Codex MCP: https://developers.openai.com/codex/mcp/
+- Claude remote MCP connectors: https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp
+- MCP Claude Desktop quickstart: https://modelcontextprotocol.io/quickstart/user
+- Vercel MCP: https://vercel.com/docs/agent-resources/vercel-mcp
+- Supabase MCP: https://supabase.com/docs/guides/ai-tools/mcp
+- Git installation: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git

@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vibe Coding Starter
 
-## Getting Started
+Windows와 macOS 사용자가 바이브코딩을 안전하게 시작하도록 돕는 Next.js 문서 사이트이자 보일러플레이트입니다.
 
-First, run the development server:
+## 가이드
+
+- [바이브코딩 워크플로우](docs/workflow/README.md) — 환경셋업 → 아이디에이션 → 플래닝(Goal) → 검수
+- [환경 설정 체크리스트](docs/checklist/README.md) — Git, Vercel, Supabase, MCP, 보안 점검
+- [Git 시작 가이드](docs/git/README.md) — Windows·macOS 설치, GitHub 인증, 기본 흐름
+- [ChatGPT와 Claude Desktop MCP](docs/mcp/README.md) — Vercel·Supabase 연결 및 프로젝트 설정
+- [Vercel과 Supabase 시작](docs/deploy/README.md) — fork 배포, 개발 프로젝트, 최소 권한, 롤백
+
+`docs/*/README.md`가 문서의 원본이며 웹사이트는 이 파일을 빌드 시 직접 읽어 렌더링합니다.
+AI 에이전트는 먼저 [llms.txt](llms.txt)를 읽으면 저장소 구조와 완료 기준을 빠르게 확인할 수 있습니다.
+
+## 로컬 실행
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install --frozen-lockfile
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000)을 엽니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 검증
 
-## Learn More
+```bash
+bun run lint
+bun run typecheck
+bun run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 기술 구성
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js App Router + TypeScript
+- Tailwind CSS
+- React Markdown + GitHub Flavored Markdown
+- Codex와 Claude Code를 위한 저장소 범위 MCP 설정
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## MCP 설정
 
-## Deploy on Vercel
+- Codex: `.codex/config.toml`
+- Claude Code: `.mcp.json`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ChatGPT와 Claude Desktop은 저장소의 프로젝트 설정을 자동으로 읽지 않습니다. 자세한 연결 방법은 [MCP 가이드](docs/mcp/README.md)를 확인하세요.
+저장소 범위 설정은 클라우드 서비스 권한을 자동으로 한 프로젝트에 제한하지 않습니다. Supabase 기본 설정은 실제 개발 project ref가 생길 때까지 docs-only와 read-only로 유지합니다.

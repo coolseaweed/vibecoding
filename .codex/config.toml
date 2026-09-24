@@ -2,6 +2,8 @@
 
 [mcp_servers.vercel]
 url = "https://mcp.vercel.com"
+default_tools_approval_mode = "prompt"
 
 [mcp_servers.supabase]
-url = "https://mcp.supabase.com/mcp"
+url = "https://mcp.supabase.com/mcp?read_only=true&features=docs"
+default_tools_approval_mode = "prompt"
