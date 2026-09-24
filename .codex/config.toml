@@ -1,7 +1,7 @@
 #:schema https://developers.openai.com/codex/config-schema.json
 
 [mcp_servers.vercel]
-url = "https://mcp.vercel.com"
+url = "https://mcp.vercel.com/coolseaweeds-projects/vibecoding"
 default_tools_approval_mode = "prompt"
 
 [mcp_servers.supabase]

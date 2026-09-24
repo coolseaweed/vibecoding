@@ -2,6 +2,9 @@
 
 Windows와 macOS 사용자가 바이브코딩을 안전하게 시작하도록 돕는 Next.js 문서 사이트이자 보일러플레이트입니다.
 
+웹 가이드: https://vibecoding-pied-ten.vercel.app
+세션 진단: https://vibecoding-pied-ten.vercel.app/doctor
+
 ## 가이드
 
 - [바이브코딩 워크플로우](docs/workflow/README.md) — 환경셋업 → 아이디에이션 → 플래닝(Goal) → 검수

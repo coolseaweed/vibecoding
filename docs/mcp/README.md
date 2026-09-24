@@ -23,7 +23,7 @@ MCP 연결은 강력한 권한을 가질 수 있습니다. 신뢰하는 공식 �
 
 | 이름 | URL | 인증 방식 |
 | --- | --- | --- |
-| Vercel | `https://mcp.vercel.com` | OAuth |
+| Vercel | `https://mcp.vercel.com/coolseaweeds-projects/vibecoding` | OAuth |
 | Supabase 문서 전용 기본값 | `https://mcp.supabase.com/mcp?read_only=true&features=docs` | OAuth |
 
 토큰을 JSON이나 TOML 파일에 직접 붙여 넣지 마세요. 브라우저에서 열리는 공식 OAuth 승인 화면을 사용합니다.
@@ -49,7 +49,7 @@ MCP 연결은 강력한 권한을 가질 수 있습니다. 신뢰하는 공식 �
 
 1. [ChatGPT Plugins](https://chatgpt.com/plugins)를 엽니다.
 2. 더하기 버튼으로 Developer mode 앱을 만듭니다.
-3. 이름은 `Vercel — vibecoding`, URL은 `https://mcp.vercel.com`을 입력합니다.
+3. 이름은 `Vercel — vibecoding`, URL은 `https://mcp.vercel.com/coolseaweeds-projects/vibecoding`을 입력합니다.
 4. 인증 방식으로 OAuth를 선택하고 Vercel 로그인·권한 승인을 완료합니다.
 
 ### 3. Supabase 앱 추가
@@ -92,7 +92,7 @@ Vercel과 Supabase는 원격 HTTP MCP이므로 가능하면 설정 파일보다 
 
 1. Claude Desktop에서 **Settings → Connectors**를 엽니다.
 2. **Add custom connector**를 선택합니다.
-3. `Vercel — vibecoding`과 `https://mcp.vercel.com`을 등록합니다.
+3. `Vercel — vibecoding`과 `https://mcp.vercel.com/coolseaweeds-projects/vibecoding`을 등록합니다.
 4. 같은 방식으로 `Supabase — vibecoding`과 프로젝트 제한이 포함된 Supabase URL을 등록합니다. project ref가 없다면 docs-only URL을 사용합니다.
 5. 각 서비스의 OAuth 로그인과 권한 승인을 완료합니다.
 6. 새 대화에서 필요한 커넥터만 활성화합니다.
@@ -174,7 +174,7 @@ claude
 
 ```toml
 [mcp_servers.vercel]
-url = "https://mcp.vercel.com"
+url = "https://mcp.vercel.com/coolseaweeds-projects/vibecoding"
 default_tools_approval_mode = "prompt"
 
 [mcp_servers.supabase]

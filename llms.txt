@@ -3,6 +3,7 @@
 > A Korean-first guide and Next.js boilerplate for complete beginners on Windows and macOS. It teaches a four-stage vibe-coding session: environment setup, ideation, Goal planning, and review.
 
 Repository: https://github.com/coolseaweed/vibecoding
+Website: https://vibecoding-pied-ten.vercel.app
 Language: Korean, with English tool and command names preserved
 Package manager: Bun only
 Audience: complete beginners who may not have GitHub, Vercel, or Supabase accounts
@@ -14,6 +15,7 @@ Audience: complete beginners who may not have GitHub, Vercel, or Supabase accoun
 - docs/git/README.md — account creation, Windows and macOS installation, fork, clone, commit, and troubleshooting
 - docs/mcp/README.md — ChatGPT, Claude Desktop, Codex, and Claude Code setup for Vercel and Supabase MCP
 - docs/deploy/README.md — account creation, fork-based Vercel deployment, development Supabase setup, verification, and rollback
+- /doctor — agent-readable diagnostic protocol and browser checklist for environment setup, ideation, Goal/Plan quality, and review evidence
 
 The Markdown files under docs are the documentation source of truth. Their website routes use the same slug, for example `docs/git/README.md` becomes `/docs/git`.
 
@@ -43,7 +45,7 @@ Do not use npm, yarn, or pnpm. Do not add environment variables until the featur
 
 - Codex repository config: `.codex/config.toml`
 - Claude Code repository config: `.mcp.json`
-- Vercel remote MCP domain: `https://mcp.vercel.com`
+- Vercel project MCP: `https://mcp.vercel.com/coolseaweeds-projects/vibecoding`
 - Supabase safe default: docs-only, read-only remote MCP until a real development project ref exists
 
 Repository-scoped config does not automatically restrict service permissions to one cloud project. ChatGPT and Claude Desktop do not read these repository files. Read `docs/mcp/README.md` before authentication. Prefer OAuth and manual confirmation. Scope Supabase to a development `project_ref`, `read_only=true`, and minimum features before enabling database tools.

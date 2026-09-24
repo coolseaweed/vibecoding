@@ -70,7 +70,7 @@ Vercel 프로젝트를 아직 만들지 않았다면 MCP가 계정의 여러 프
 - [ ] [MCP 시작 가이드](../mcp/README.md)를 읽었다.
 - [ ] ChatGPT에서 Developer mode 사용 가능 여부를 확인했다.
 - [ ] Claude Desktop에서 Custom Connector 사용 가능 여부를 확인했다.
-- [ ] Vercel MCP URL이 공식 `https://mcp.vercel.com` 도메인인지 확인했다.
+- [ ] Vercel MCP URL이 `https://mcp.vercel.com/coolseaweeds-projects/vibecoding`인지 확인했다.
 - [ ] Supabase MCP URL이 공식 `https://mcp.supabase.com/mcp` 도메인과 필요한 제한 파라미터를 사용하는지 확인했다.
 - [ ] Codex가 이 저장소의 `.codex/config.toml`을 신뢰 후 읽는지 확인했다.
 - [ ] Claude Code가 이 저장소의 `.mcp.json`을 승인 후 읽는지 확인했다.

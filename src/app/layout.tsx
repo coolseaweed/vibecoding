@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </Link>
             <nav aria-label="주요 메뉴">
               <Link href="/#workflow">워크플로우</Link>
-              <Link href="/#guides">가이드</Link>
+              <Link href="/doctor">Doctor</Link>
               <Link href="/docs/git" className="nav-cta">처음 시작</Link>
             </nav>
           </div>
@@ -36,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Link href="/docs/workflow">워크플로우</Link>
             <Link href="/docs/git">Git</Link>
             <Link href="/docs/mcp">MCP</Link>
+            <Link href="/doctor">Doctor</Link>
             <a href="https://github.com/coolseaweed/vibecoding" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </footer>

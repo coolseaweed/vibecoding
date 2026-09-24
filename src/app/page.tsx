@@ -20,7 +20,7 @@ export default async function Home() {
         </p>
         <div className="intro-actions">
           <Link href="/docs/git" className="button button-primary">1. Git부터 시작</Link>
-          <Link href="/docs/workflow" className="button">전체 워크플로우</Link>
+          <Link href="/doctor" className="button">세션 진단</Link>
         </div>
       </section>
 
@@ -31,6 +31,7 @@ export default async function Home() {
           <li><Link href="/docs/checklist">환경 설정 체크리스트 검토</Link></li>
           <li><Link href="/docs/deploy">필요한 경우 Vercel과 Supabase 개발 환경 준비</Link></li>
           <li><Link href="/docs/workflow">4단계 바이브코딩 워크플로우 진행</Link></li>
+          <li><Link href="/doctor">Doctor에서 단계별 완료 여부 진단</Link></li>
         </ol>
       </section>
 
