@@ -178,11 +178,17 @@ h1, h2, h3 { word-break: keep-all; overflow-wrap: break-word; }
 .doctor-stage header p { margin: 0; color: var(--muted); font-size: 13px; }
 .doctor-stage header span { min-width: 52px; padding: 3px 7px; border: 1px solid var(--border); text-align: center; font-size: 11px; font-weight: 700; }
 .doctor-stage header .passed { border-color: #287a41; color: #1d6534; }
-.doctor-checks { padding: 8px 12px; display: grid; }
-.doctor-checks label { padding: 8px 4px; display: grid; grid-template-columns: auto 1fr; gap: 9px; cursor: pointer; font-size: 13px; }
-.doctor-checks input { margin-top: 4px; }
-.doctor-checks .checked { color: #777; text-decoration: line-through; }
+.doctor-stage header .failed { border-color: #a12b2b; color: #8b2020; }
+.doctor-checks { padding: 0 12px; display: grid; }
+.doctor-check { padding: 14px 4px; border-bottom: 1px solid var(--border); }
+.doctor-check:last-child { border-bottom: 0; }
+.doctor-check > p { margin: 0 0 8px; font-size: 13px; }
+.doctor-check > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 8px; }
+.doctor-check label { display: grid; gap: 3px; color: var(--muted); font-size: 10px; }
+.doctor-check select, .doctor-check input { min-width: 0; height: 34px; padding: 5px 7px; border: 1px solid #aaa; border-radius: 2px; background: white; color: var(--text); font-size: 12px; }
+.doctor-check small { display: block; margin-top: 5px; color: #8b2020; font-size: 11px; }
 .doctor-reset { margin-top: 20px; padding: 0; border: 0; background: none; color: var(--link); cursor: pointer; font-size: 12px; text-decoration: underline; }
+.doctor-reset:disabled { color: var(--muted); cursor: default; }
 
 @media (max-width: 800px) {
   .workflow-grid { grid-template-columns: 1fr 1fr; }
@@ -218,6 +224,7 @@ h1, h2, h3 { word-break: keep-all; overflow-wrap: break-word; }
   .review-groups { grid-template-columns: 1fr; }
   .doctor-panel { padding: 14px; }
   .doctor-stage header { flex-direction: column; gap: 10px; }
+  .doctor-check > div { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

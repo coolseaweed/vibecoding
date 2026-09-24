@@ -21,7 +21,8 @@ export default function DoctorPage() {
       <section className="agent-instructions" aria-labelledby="agent-instructions-title">
         <h2 id="agent-instructions-title">에이전트 실행 규칙</h2>
         <ol>
-          <li>현재 프로젝트의 AGENTS.md, Goal, Plan.md 또는 계획 문서를 먼저 찾고, 없으면 FAIL로 기록한다.</li>
+          <li>현재 작업 디렉터리의 저장소 루트에서 AGENTS.md, Goal, Plan.md 또는 계획 문서를 먼저 찾는다.</li>
+          <li>Goal, 범위 또는 완료 기준이 없으면 BLOCKED로 보고하고 파일과 외부 시스템을 변경하지 않는다.</li>
           <li>아래 항목을 순서대로 검사하고 각 항목을 PASS, FAIL, 미확인으로 판정한다.</li>
           <li>명령 결과나 파일 위치가 있는 경우에만 PASS로 판정한다. 추측하지 않는다.</li>
           <li>Goal 범위 안의 안전한 FAIL은 개선하고 같은 검사를 다시 실행한다.</li>
@@ -31,8 +32,8 @@ export default function DoctorPage() {
       </section>
 
       <p className="doctor-note">
-        사람이 직접 사용할 때는 실제로 확인한 항목만 체크하세요. 모든 항목을 만족해야 단계가 통과되며,
-        체크 상태는 현재 브라우저에만 저장됩니다.
+        사람이 직접 사용할 때는 각 항목의 판정과 증거를 기록하세요. 모든 항목이 증거 있는 PASS여야
+        단계가 통과되며, 진단 상태는 현재 브라우저에만 저장됩니다.
       </p>
       <SessionDoctor stages={doctorStages} />
     </main>
