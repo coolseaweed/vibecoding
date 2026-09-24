@@ -1,3 +1,5 @@
+import ChatRoom from "./ChatRoom";
+
 function GitVisual() {
   return (
     <svg viewBox="0 0 320 176" role="img" aria-label="내 컴퓨터의 변경을 커밋해 GitHub에 저장하는 흐름">
@@ -210,6 +212,17 @@ export default function Home() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="chat-section" id="chat" aria-labelledby="chat-title">
+        <div className="section-title">
+          <span>03</span>
+          <div>
+            <h2 id="chat-title">수강생 익명 채팅</h2>
+            <p>랜덤 닉네임으로 수업 중 질문과 유용한 링크를 가볍게 나눕니다.</p>
+          </div>
+        </div>
+        <ChatRoom />
       </section>
     </main>
   );

@@ -21,7 +21,7 @@ This public repository is the single beginner reference for a complete vibe-codi
 - `docs/workflow/README.md` defines the required four-stage loop: environment setup, ideation, Goal planning, review.
 - `docs/checklist/README.md` defines environment readiness.
 - `llms.txt` is the repository's concise machine-readable entrypoint.
-- GitHub Issues are the source of truth for implementation goals and plans. Do not add implementation plan files to the repository.
+- GitHub Issues are the source of truth for implementation work and plans. Do not add implementation plan files to the repository.
 
 ## Commands
 
@@ -33,21 +33,20 @@ bun dev
 bun run lint
 bun run typecheck
 bun run build
+bun run test
 ```
 
-Before handoff, lint, typecheck, and build must pass. This repository does not yet have an automated test suite; do not claim tests passed when none exist.
+Before handoff, test, lint, typecheck, and build must pass.
 
 ## Required protocol
 
 1. Read this file, `README.md`, `docs/workflow/README.md`, and the guide relevant to the task.
 2. Inspect `git status` and existing configuration before changing files.
-3. State a Goal with scope, non-goals, constraints, and observable success criteria.
+3. State the scope, non-goals, constraints, and observable success criteria.
 4. Pair every implementation step with a verification step.
-5. Make the minimum change that satisfies the Goal and preserve unrelated work.
+5. Make the minimum change that satisfies the request and preserve unrelated work.
 6. Review the diff, run required checks, and manually verify affected browser flows.
 7. Report evidence, deployment URL when requested, and any remaining limitation.
-
-If the request does not supply a Goal with user, problem, scope, and acceptance criteria, do not invent or implement a feature. Return the missing-input template from `docs/workflow/README.md` and wait for those inputs.
 
 ## Safety gates
 
@@ -68,7 +67,7 @@ If the request does not supply a Goal with user, problem, scope, and acceptance 
 ## Definition of done
 
 - The requested learner flow works at desktop and mobile widths.
-- `bun run lint`, `bun run typecheck`, and `bun run build` pass.
+- `bun run test`, `bun run lint`, `bun run typecheck`, and `bun run build` pass.
 - Changed documentation and code agree with each other.
 - Keyboard focus, heading order, links, and common responsive states are reviewed.
 - No secret, generated build output, or unrelated change is staged.

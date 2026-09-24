@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   description: "Git, Vercel, Supabase, MCP와 Plan.md 기반 코딩 흐름을 한눈에 설명합니다.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
       <body>
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link href="/#setup">환경셋업</Link>
               <Link href="/#core">핵심 개념</Link>
               <Link href="/#flow">코딩 플로우</Link>
+              <Link href="/#chat">채팅</Link>
             </nav>
           </div>
         </header>
