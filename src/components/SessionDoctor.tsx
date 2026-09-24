@@ -42,7 +42,12 @@ export function SessionDoctor({ stages }: { stages: DoctorStage[] }) {
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      setResults(readSavedResults());
+      const shouldReset = new URLSearchParams(window.location.search).has("reset");
+      if (shouldReset) {
+        window.localStorage.removeItem(STORAGE_KEY);
+        window.history.replaceState(null, "", "/doctor");
+      }
+      setResults(shouldReset ? {} : readSavedResults());
       setReady(true);
     });
     return () => window.cancelAnimationFrame(frame);
@@ -136,7 +141,7 @@ export function SessionDoctor({ stages }: { stages: DoctorStage[] }) {
         })}
       </div>
 
-      <button type="button" className="doctor-reset" onClick={reset} disabled={!ready}>진단 초기화</button>
+      <a className="doctor-reset" href="/doctor?reset=1" onClick={reset}>진단 초기화</a>
     </div>
   );
 }
