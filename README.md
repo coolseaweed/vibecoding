@@ -8,7 +8,7 @@ Windows와 macOS 사용자가 바이브코딩을 안전하게 시작하도록 �
 ## 가이드
 
 - [바이브코딩 워크플로우](docs/workflow/README.md) — 환경셋업 → 아이디에이션 → 플래닝(Goal) → 검수
-- [세션 Doctor](docs/doctor/README.md) — 에이전트가 현재 프로젝트를 자가진단하고 개선하는 SSOT
+- [환경 연결 Doctor](docs/doctor/README.md) — Git, Vercel, Supabase, MCP 연결을 진단하는 SSOT
 - [환경 설정 체크리스트](docs/checklist/README.md) — Git, Vercel, Supabase, MCP, 보안 점검
 - [Git 시작 가이드](docs/git/README.md) — Windows·macOS 설치, GitHub 인증, 기본 흐름
 - [ChatGPT와 Claude Desktop MCP](docs/mcp/README.md) — Vercel·Supabase 연결 및 프로젝트 설정

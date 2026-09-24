@@ -5,8 +5,8 @@ import Link from "next/link";
 import { MarkdownContent } from "@/components/MarkdownContent";
 
 export const metadata: Metadata = {
-  title: "세션 Doctor",
-  description: "환경셋업, 아이디에이션, Goal 플래닝, 검수를 객관적인 체크리스트로 진단합니다.",
+  title: "환경 연결 Doctor",
+  description: "Git, Vercel, Supabase, MCP 연결 상태를 객관적으로 진단합니다.",
 };
 
 export default async function DoctorPage() {
@@ -15,9 +15,9 @@ export default async function DoctorPage() {
   return (
     <main className="doctor-page">
       <Link href="/" className="back-link">← 가이드 홈</Link>
-      <h1>세션 Doctor</h1>
+      <h1>환경 연결 Doctor</h1>
       <p className="doctor-intro">
-        에이전트에게 이 페이지 URL만 전달하세요. 아래 문서가 자가진단과 개선의 단일 기준입니다.
+        에이전트에게 이 페이지 URL만 전달하세요. 아래 문서가 환경 연결 진단의 단일 기준입니다.
       </p>
       <article className="doc-article">
         <MarkdownContent content={content} />

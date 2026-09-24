@@ -15,7 +15,7 @@ Audience: complete beginners who may not have GitHub, Vercel, or Supabase accoun
 - docs/git/README.md — account creation, Windows and macOS installation, fork, clone, commit, and troubleshooting
 - docs/mcp/README.md — ChatGPT, Claude Desktop, Codex, and Claude Code setup for Vercel and Supabase MCP
 - docs/deploy/README.md — account creation, fork-based Vercel deployment, development Supabase setup, verification, and rollback
-- /doctor — agent-readable SSOT for self-diagnosis and improvement across setup, ideation, Goal planning, and review
+- /doctor — agent-readable SSOT for checking Git, Vercel, Supabase, and MCP connections
 - docs/doctor/README.md — Markdown source of truth rendered at /doctor
 
 The Markdown files under docs are the documentation source of truth. Their website routes use the same slug, for example `docs/git/README.md` becomes `/docs/git`.
