@@ -18,6 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link href="/#setup">환경셋업</Link>
               <Link href="/#core">핵심 개념</Link>
               <Link href="/#flow">코딩 플로우</Link>
+              <Link href="/#chat">채팅</Link>
             </nav>
           </div>
         </header>

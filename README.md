@@ -4,11 +4,12 @@ Windows와 macOS 사용자가 바이브코딩을 시작하도록 돕는 Next.js 
 
 웹 가이드: https://vibecoding-pied-ten.vercel.app
 
-웹사이트는 세 가지만 보여줍니다.
+웹사이트는 네 가지를 보여줍니다.
 
 - Windows와 macOS 환경셋업
 - Git, Vercel, Supabase, MCP의 관계
 - `Plan.md → goal → 오래 실행 → 검수` 코딩 플로우
+- 수강생이 랜덤 닉네임으로 참여하는 무료 익명 채팅 체험
 
 ## 가이드
 
@@ -37,6 +38,7 @@ bun dev
 bun run lint
 bun run typecheck
 bun run build
+bun run test
 ```
 
 ## 기술 구성
@@ -44,7 +46,10 @@ bun run build
 - Next.js App Router + TypeScript
 - Tailwind CSS
 - 인라인 SVG 개념도
+- Vercel Function 메모리 기반 임시 채팅
 - Codex와 Claude Code를 위한 저장소 범위 MCP 설정
+
+채팅은 별도 계정이나 환경변수 없이 실행됩니다. 메시지는 최대 24시간 유지되지만, Vercel Function이 재시작·절전·확장되면 더 일찍 사라지거나 인스턴스 사이에서 보이지 않을 수 있는 수업용 체험 기능입니다.
 
 ## MCP 설정
 

@@ -36,10 +36,11 @@ bun dev
 bun run lint
 bun run typecheck
 bun run build
+bun run test
 bun run check
 ```
 
-Do not use npm, yarn, or pnpm. Do not add environment variables until the feature requiring them is approved. Never commit secrets or `.env` files.
+Do not use npm, yarn, or pnpm. The anonymous chat uses only one Vercel Function instance's memory, so messages can disappear before 24 hours or differ between instances. Never commit secrets or `.env` files.
 
 ## MCP configuration
 
@@ -61,7 +62,7 @@ Use the minimum change that satisfies the Goal. Preserve unrelated work. Do not 
 Completion requires:
 
 - the requested user flow works;
-- `bun run lint`, `bun run typecheck`, and `bun run build` pass;
+- `bun run test`, `bun run lint`, `bun run typecheck`, and `bun run build` pass;
 - relevant browser checks pass on desktop and mobile;
 - no secrets or unintended files are staged;
 - the final report names evidence, deployment URL when requested, and any remaining limitation.

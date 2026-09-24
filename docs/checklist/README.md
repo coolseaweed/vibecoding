@@ -33,8 +33,11 @@
 - [ ] `bun run lint`가 통과한다.
 - [ ] `bun run typecheck`가 통과한다.
 - [ ] `bun run build`가 통과한다.
+- [ ] `bun run test`가 통과한다.
 - [ ] 위 검증을 묶은 `bun run check`가 통과한다.
 - [ ] 작업 전 `git status`로 기존 변경을 확인하는 습관을 정했다.
+
+익명 채팅 체험에는 별도 서비스나 환경변수가 필요하지 않습니다. 메시지는 Vercel Function 한 인스턴스의 메모리에만 있어 서버가 재시작·절전·확장되면 사라지거나 다른 인스턴스 사용자에게 보이지 않을 수 있습니다.
 
 ## 4. Vercel 준비
 

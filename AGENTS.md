@@ -33,9 +33,10 @@ bun dev
 bun run lint
 bun run typecheck
 bun run build
+bun run test
 ```
 
-Before handoff, lint, typecheck, and build must pass. This repository does not yet have an automated test suite; do not claim tests passed when none exist.
+Before handoff, test, lint, typecheck, and build must pass.
 
 ## Required protocol
 
@@ -68,7 +69,7 @@ If the request does not supply a Goal with user, problem, scope, and acceptance 
 ## Definition of done
 
 - The requested learner flow works at desktop and mobile widths.
-- `bun run lint`, `bun run typecheck`, and `bun run build` pass.
+- `bun run test`, `bun run lint`, `bun run typecheck`, and `bun run build` pass.
 - Changed documentation and code agree with each other.
 - Keyboard focus, heading order, links, and common responsive states are reviewed.
 - No secret, generated build output, or unrelated change is staged.
