@@ -18,8 +18,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const clientId = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
-    const message = chatStore.add(input, clientId);
+    const message = chatStore.add(input);
 
     return Response.json({ message }, { status: 201 });
   } catch (error) {

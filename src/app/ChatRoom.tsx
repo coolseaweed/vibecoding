@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useState } from "react";
+import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import type { ChatMessage } from "@/lib/chat";
 
 const adjectives = ["씩씩한", "다정한", "즐거운", "빛나는", "차분한"];
@@ -30,6 +30,8 @@ export default function ChatRoom() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
+  const messageListRef = useRef<HTMLDivElement>(null);
+  const latestMessageId = messages[messages.length - 1]?.id;
 
   const loadMessages = useCallback(async () => {
     const response = await fetch("/api/chat", { cache: "no-store" });
@@ -65,6 +67,13 @@ export default function ChatRoom() {
     };
   }, [loadMessages]);
 
+  useEffect(() => {
+    const messageList = messageListRef.current;
+    if (messageList) {
+      messageList.scrollTop = messageList.scrollHeight;
+    }
+  }, [latestMessageId]);
+
   async function sendMessage(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSending(true);
@@ -98,7 +107,7 @@ export default function ChatRoom() {
         <span>내 이름: <strong>{nickname || "연결 중…"}</strong></span>
       </div>
 
-      <div className="chat-messages" aria-live="polite" aria-label="채팅 메시지">
+      <div className="chat-messages" ref={messageListRef} aria-live="polite" aria-label="채팅 메시지">
         {messages.length === 0 ? (
           <p className="chat-empty">아직 메시지가 없어요. 첫 인사를 남겨보세요.</p>
         ) : (

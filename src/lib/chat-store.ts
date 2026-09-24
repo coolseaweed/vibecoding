@@ -7,7 +7,7 @@ export class ChatRateLimitError extends Error {}
 
 export function createChatStore() {
   let messages: ChatMessage[] = [];
-  let lastSentAt = new Map<string, number>();
+  let lastSentAt: number | undefined;
 
   function activeMessages(now: number) {
     return messages.filter((message) => message.createdAt > now - CHAT_LIFETIME_MS);
@@ -18,10 +18,8 @@ export function createChatStore() {
       messages = activeMessages(now);
       return [...messages];
     },
-    add(input: Pick<ChatMessage, "nickname" | "text">, clientId: string, now = Date.now()) {
-      const previousSentAt = lastSentAt.get(clientId);
-
-      if (previousSentAt !== undefined && now - previousSentAt < RATE_LIMIT_MS) {
+    add(input: Pick<ChatMessage, "nickname" | "text">, now = Date.now()) {
+      if (lastSentAt !== undefined && now - lastSentAt < RATE_LIMIT_MS) {
         throw new ChatRateLimitError("잠시 후 다시 보내 주세요.");
       }
 
@@ -32,8 +30,7 @@ export function createChatStore() {
       };
 
       messages = [...activeMessages(now), message].slice(-MAX_MESSAGES);
-      lastSentAt = new Map([...lastSentAt].filter(([, sentAt]) => now - sentAt < RATE_LIMIT_MS));
-      lastSentAt.set(clientId, now);
+      lastSentAt = now;
 
       return message;
     },

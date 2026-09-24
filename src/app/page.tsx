@@ -1,4 +1,4 @@
-import ChatRoom from "./chat-room";
+import ChatRoom from "./ChatRoom";
 
 function GitVisual() {
   return (
