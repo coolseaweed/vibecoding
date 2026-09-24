@@ -54,8 +54,7 @@ Vercel이 다음 값을 감지하는지 확인합니다.
 **Deploy**를 누르고 빌드가 끝날 때까지 기다립니다. 성공하면 다음을 확인합니다.
 
 1. 배포 URL의 홈이 열린다.
-2. `/docs/workflow`, `/docs/checklist`, `/docs/git`, `/docs/mcp`, `/docs/deploy`가 열린다.
-3. `/llms.txt`가 일반 텍스트로 열린다.
+2. 홈페이지의 환경셋업, 네 가지 핵심 개념, 코딩 플로우가 열린다.
 4. 데스크톱과 모바일 폭에서 메뉴와 문서가 읽힌다.
 
 ### 4. Preview와 Production 구분
@@ -140,7 +139,7 @@ https://mcp.supabase.com/mcp?read_only=true&features=docs
 - [ ] 내 GitHub fork를 Vercel에 연결했다.
 - [ ] Preview와 Production의 차이를 이해했다.
 - [ ] production build가 성공했다.
-- [ ] 모든 문서 경로와 `/llms.txt`가 HTTP 200으로 열린다.
+- [ ] 홈페이지가 HTTP 200으로 열리고 세 개의 강의 섹션이 보인다.
 - [ ] 모바일 화면에서 가로 스크롤이나 겹침이 없다.
 - [ ] Supabase는 개발 프로젝트를 사용한다.
 - [ ] Supabase MCP를 특정 project ref와 읽기 전용으로 제한했거나 docs-only로 유지했다.

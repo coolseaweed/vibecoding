@@ -1,9 +1,14 @@
 # Vibe Coding Starter
 
-Windows와 macOS 사용자가 바이브코딩을 안전하게 시작하도록 돕는 Next.js 문서 사이트이자 보일러플레이트입니다.
+Windows와 macOS 사용자가 바이브코딩을 시작하도록 돕는 Next.js 웹사이트이자 보일러플레이트입니다.
 
 웹 가이드: https://vibecoding-pied-ten.vercel.app
-세션 진단: https://vibecoding-pied-ten.vercel.app/doctor
+
+웹사이트는 세 가지만 보여줍니다.
+
+- Windows와 macOS 환경셋업
+- Git, Vercel, Supabase, MCP의 관계
+- `Plan.md → goal → 오래 실행 → 검수` 코딩 플로우
 
 ## 가이드
 
@@ -14,7 +19,7 @@ Windows와 macOS 사용자가 바이브코딩을 안전하게 시작하도록 �
 - [ChatGPT와 Claude Desktop MCP](docs/mcp/README.md) — Vercel·Supabase 연결 및 프로젝트 설정
 - [Vercel과 Supabase 시작](docs/deploy/README.md) — fork 배포, 개발 프로젝트, 최소 권한, 롤백
 
-`docs/*/README.md`가 문서의 원본이며 웹사이트는 이 파일을 빌드 시 직접 읽어 렌더링합니다.
+`docs/*/README.md`는 저장소에서 읽는 상세 참고 문서입니다. 웹사이트는 한 페이지의 강의용 요약만 제공합니다.
 AI 에이전트는 먼저 [llms.txt](llms.txt)를 읽으면 저장소 구조와 완료 기준을 빠르게 확인할 수 있습니다.
 
 ## 로컬 실행
@@ -38,7 +43,7 @@ bun run build
 
 - Next.js App Router + TypeScript
 - Tailwind CSS
-- React Markdown + GitHub Flavored Markdown
+- 인라인 SVG 개념도
 - Codex와 Claude Code를 위한 저장소 범위 MCP 설정
 
 ## MCP 설정

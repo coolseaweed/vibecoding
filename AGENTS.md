@@ -16,10 +16,11 @@ This public repository is the single beginner reference for a complete vibe-codi
 
 ## Source of truth
 
-- `docs/*/README.md` is the source for guide content; the website renders it directly.
+- `src/app/page.tsx` is the source for the single-page course website.
+- `docs/*/README.md` contains detailed repository-only references.
 - `docs/workflow/README.md` defines the required four-stage loop: environment setup, ideation, Goal planning, review.
 - `docs/checklist/README.md` defines environment readiness.
-- `llms.txt` is the concise machine-readable entrypoint and is also served at `/llms.txt`.
+- `llms.txt` is the repository's concise machine-readable entrypoint.
 - GitHub Issues are the source of truth for implementation goals and plans. Do not add implementation plan files to the repository.
 
 ## Commands
@@ -59,9 +60,8 @@ If the request does not supply a Goal with user, problem, scope, and acceptance 
 
 ## Architecture
 
-- `src/app`: Next.js App Router pages and global styles.
-- `src/components`: search, Markdown, workflow, and checklist UI.
-- `src/lib/docs.ts`: Markdown loading and document indexes.
+- `src/app/page.tsx`: the single course page.
+- `src/app/globals.css`: the complete visual system.
 - `docs`: human-readable guide sources.
 - `llms.txt`: agent-readable guide index and execution contract.
 
